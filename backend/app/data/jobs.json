@@ -1,0 +1,38 @@
+[
+  {
+    "id": "job-001",
+    "title": "AI Engineer",
+    "company": "Example AI Systems",
+    "location": "Bengaluru",
+    "min_experience": 0,
+    "skills": ["Python", "Machine Learning", "FastAPI", "SQL", "LLM"],
+    "description": "Build AI services, data pipelines and evaluation workflows for production applications."
+  },
+  {
+    "id": "job-002",
+    "title": "Software Engineer",
+    "company": "Example Platform",
+    "location": "Remote India",
+    "min_experience": 0,
+    "skills": ["Python", "FastAPI", "SQL", "DSA", "React"],
+    "description": "Build backend APIs and web features for a SaaS platform with automated testing and cloud deployment."
+  },
+  {
+    "id": "job-003",
+    "title": "Machine Learning Engineer",
+    "company": "Example Analytics",
+    "location": "Bengaluru",
+    "min_experience": 1,
+    "skills": ["Python", "Machine Learning", "Pandas", "Scikit-learn", "SQL"],
+    "description": "Develop forecasting, classification and model evaluation pipelines using business data."
+  },
+  {
+    "id": "job-004",
+    "title": "Full Stack Engineer",
+    "company": "Example Product Studio",
+    "location": "Remote",
+    "min_experience": 0,
+    "skills": ["React", "JavaScript", "Python", "REST API", "SQL"],
+    "description": "Ship customer-facing features across a React frontend and Python API layer."
+  }
+]
