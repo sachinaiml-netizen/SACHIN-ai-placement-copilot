@@ -154,3 +154,6 @@ It adds:
 - A local application pipeline with status updates and CSV/JSON export
 
 Run the FastAPI application and open `http://127.0.0.1:8000/placement-desk.html`, or open the HTML file directly in a modern browser. The tool uses local browser storage for its profile and tracker, has no LLM API dependency, and does not send outreach or scrape job boards. Scores are heuristic keyword evidence, not hiring probabilities. Verify every result manually.
+
+
+Live demo: https://sachin-placement-signal-desk-hsachin3278-3215.vercel.app
