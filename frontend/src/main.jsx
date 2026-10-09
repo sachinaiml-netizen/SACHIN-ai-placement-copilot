@@ -9,26 +9,33 @@ function App() {
 
   async function runMatch() {
     setLoading(true);
-    const response = await fetch("/match", {
-      method: "POST",
-      headers: {"Content-Type": "application/json"},
-      body: JSON.stringify({
-        name: "Candidate",
-        target_roles: roles.split(",").map(x => x.trim()).filter(Boolean),
-        skills: skills.split(",").map(x => x.trim()).filter(Boolean),
-        years_experience: 0,
-        resume_summary: "AI/ML engineering student focused on software engineering and applied machine learning."
-      })
-    });
-    setResults(await response.json());
-    setLoading(false);
+    try {
+      const response = await fetch("/match", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({
+          name: "Candidate",
+          target_roles: roles.split(",").map(x => x.trim()).filter(Boolean),
+          skills: skills.split(",").map(x => x.trim()).filter(Boolean),
+          years_experience: 0,
+          resume_summary: "AI/ML engineering student focused on software engineering and applied machine learning."
+        })
+      });
+      if (!response.ok) throw new Error("The ranking API returned " + response.status);
+      setResults(await response.json());
+    } catch (error) {
+      alert("Could not rank jobs. Start the FastAPI backend and try again.");
+    } finally {
+      setLoading(false);
+    }
   }
 
   return React.createElement("main", {className: "page"},
     React.createElement("section", {className: "hero"},
       React.createElement("p", {className: "eyebrow"}, "AI + SOFTWARE ENGINEERING"),
       React.createElement("h1", null, "Placement Copilot"),
-      React.createElement("p", null, "Explainable job matching instead of keyword guessing.")
+      React.createElement("p", null, "Explainable job matching instead of keyword guessing."),
+      React.createElement("a", {href: "/placement-desk.html", className: "desk-link"}, "Open Placement Signal Desk →")
     ),
     React.createElement("section", {className: "panel"},
       React.createElement("label", null, "Target roles"),
@@ -45,9 +52,7 @@ function App() {
             React.createElement("h2", null, job.title),
             React.createElement("p", null, job.company + " • " + job.location),
             React.createElement("p", null, job.reasons.join(" ")),
-            job.gaps.length
-              ? React.createElement("small", null, "Skill gaps: " + job.gaps.join(", "))
-              : null
+            job.gaps.length ? React.createElement("small", null, "Skill gaps: " + job.gaps.join(", ")) : null
           )
         )
       )
