@@ -84,7 +84,7 @@ Example request:
 
 ```bash
 python -m venv .venv
-# Windows: .venv\Scripts\activate
+# Windows: .venv\\Scripts\\activate
 source .venv/bin/activate
 pip install -r requirements.txt
 uvicorn backend.app.main:app --reload
@@ -111,6 +111,7 @@ Open `http://127.0.0.1:8000/` for the browser client.
 
 ```text
 .
+├── .github/workflows/ci.yml
 ├── backend/app/
 │   ├── data/jobs.json
 │   ├── main.py
@@ -124,7 +125,7 @@ Open `http://127.0.0.1:8000/` for the browser client.
 ├── tests/
 ├── Dockerfile
 ├── requirements.txt
-└── .github/workflows/ci.yml
+└── README.md
 ```
 
 ## Limitations
@@ -140,3 +141,16 @@ The included jobs are representative sample data, not live job-market data. The 
 - LLM interview coach
 - Evaluation dashboard
 - Observability and latency metrics
+
+## Placement Signal Desk
+
+The repository also includes a self-contained, browser-side workflow tool at [`frontend/placement-desk.html`](frontend/placement-desk.html).
+
+It adds:
+- Job-description fit analysis with a visible 60/25/15 skill/role/experience formula
+- Detected skill overlap and skill gaps
+- A role-specific proof-of-work sprint checklist
+- Evidence-based recruiter/engineer outreach drafts
+- A local application pipeline with status updates and CSV/JSON export
+
+Run the FastAPI application and open `http://127.0.0.1:8000/placement-desk.html`, or open the HTML file directly in a modern browser. The tool uses local browser storage for its profile and tracker, has no LLM API dependency, and does not send outreach or scrape job boards. Scores are heuristic keyword evidence, not hiring probabilities. Verify every result manually.
