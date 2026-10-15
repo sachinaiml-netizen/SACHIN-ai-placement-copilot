@@ -1,0 +1,51 @@
+{
+  "status": "illustrative_sample_not_live_run",
+  "role_summary": "Summarize responsibilities and requirements from the job post.",
+  "requirements": [
+    {
+      "requirement": "Python",
+      "priority": "high",
+      "candidate_evidence": [
+        "AI Placement Copilot project describes Python/FastAPI"
+      ],
+      "evidence_strength": "direct",
+      "gap": "Verify specific proficiency with code and tests"
+    },
+    {
+      "requirement": "LLM evaluation",
+      "priority": "high",
+      "candidate_evidence": [],
+      "evidence_strength": "gap",
+      "gap": "No completed LLM evaluation project has been supplied; build and test a small evaluation harness"
+    }
+  ],
+  "fit_assessment": {
+    "rubric": "Advisory evidence rubric; not a hiring probability",
+    "demonstrated": [
+      "Python/FastAPI project work (based on supplied candidate profile)"
+    ],
+    "adjacent": [
+      "AI/ML coursework and project context"
+    ],
+    "gaps": [
+      "LLM evaluation experience needs a concrete implementation"
+    ]
+  },
+  "proof_of_work_sprint": [
+    {
+      "step": 1,
+      "task": "Build a small dataset of 10 representative prompts and expected properties"
+    },
+    {
+      "step": 2,
+      "task": "Run the chosen model and validate JSON structure and requirement coverage"
+    },
+    {
+      "step": 3,
+      "task": "Report failures, unsupported claims, and reproducibility details"
+    }
+  ],
+  "outreach_draft": "Hello, I reviewed the role requirements and built a small prototype focused on evidence-backed job analysis. It distinguishes direct project evidence from gaps and keeps outreach as a human-reviewed draft. I would welcome feedback on whether this is useful to your team.",
+  "human_review_required": true,
+  "messages_sent": false
+}
