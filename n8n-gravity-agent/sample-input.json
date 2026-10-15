@@ -1,0 +1,27 @@
+{
+  "job_posting": "Sample role: AI Intern. Requirements include Python, building reliable APIs, evaluating LLM outputs, and communicating findings. This text is fictional example data for local workflow testing.",
+  "candidate_profile": {
+    "skills": [
+      "Python",
+      "FastAPI",
+      "SQL",
+      "Machine Learning fundamentals",
+      "GitHub Actions"
+    ],
+    "projects": [
+      {
+        "name": "AI Placement Copilot",
+        "evidence": "Python/FastAPI project with deterministic explainable job ranking, typed schemas, unit tests, Docker, GitHub Actions CI, and a small React client."
+      },
+      {
+        "name": "CreativeProof",
+        "evidence": "Rule-based campaign creative QA prototype; checks copy against configurable rules. Not an LLM system."
+      }
+    ],
+    "preferences": [
+      "AI engineering",
+      "backend Python",
+      "reliable practical systems"
+    ]
+  }
+}
